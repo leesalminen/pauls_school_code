@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 #Name: Paul Salminen
 #Email: paul.salminen@colorado.edu
 #Project 1: Card guessing game
@@ -10,11 +12,8 @@ import sys
 #Create the random Card
 def CardGenerator():
 	Suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
-	Numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-	from random import choice
-	Suit = choice(Suits)
-	Number = choice(Numbers)
-	return (Suit, Number)
+
+	return (random.choice(Suits), random.randint(2,14))
 
 #Changes picture card input into number for easier processing
 def PictureCards(Card):
