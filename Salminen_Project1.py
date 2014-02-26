@@ -28,15 +28,18 @@ def PictureCards(Card):
 def NumHelper(UserNumber, RealNumber):
 	x = 0
 	while x < 3:
-		if UserNumber > RealNumber:
-			UserNumber = raw_input("Nope! Your number is too high, idiot. Please try again: ")
+		if UserNumber 	> RealNumber:
+			UserNumber 	= raw_input("Nope! Your number is too high, idiot. Please try again: ")
+
 		elif UserNumber < RealNumber:
-			UserNumber = raw_input("Nope! Your number is too low, putz. Please try again: ")
+			UserNumber 	= raw_input("Nope! Your number is too low, putz. Please try again: ")
+			
 		elif UserNumber == RealNumber:
-			UserNumber = UserNumber
-			x = 3
+			return(UserNumber)
+
 		UserNumber = int(PictureCards(UserNumber))
-		x = x + 1
+		x += 1
+	
 	return(UserNumber)
 			
 #Help user find suit
