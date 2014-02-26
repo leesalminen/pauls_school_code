@@ -17,16 +17,11 @@ def CardGenerator():
 
 #Changes picture card input into number for easier processing
 def PictureCards(Card):
-	if Card == "Jack":
-		Card = 11
-	elif Card == "Queen":
-		Card = 12
-	elif Card == "King":
-		Card = 13
-	elif Card == "Ace":
-		Card = 14
-	else:
-		Card == Card
+	Cards = {"Jack": 11, "Queen": 12, "King": 13, "Ace": 14}
+
+	if Card in Cards:
+		return Cards[Card]
+
 	return(Card)
 	
 #Help user find number
